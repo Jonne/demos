@@ -31,12 +31,12 @@ namespace Exercise_3
 
         private static bool AscendingComparison(int first, int second)
         {
-            return first < second;
+            return first > second;
         }
 
         private static bool DescendingComparison(int first, int second)
         {
-            return first > second;
+            return first < second;
         }
 
         public static void BubbleSort(int[] items, ComparisonDelegate comparison)
