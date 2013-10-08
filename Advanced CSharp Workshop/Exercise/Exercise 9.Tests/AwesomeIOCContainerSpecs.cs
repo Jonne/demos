@@ -1,8 +1,9 @@
 ﻿using System;
+using Exercise_9b.Tests.Data;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Exercise_9.Tests
+namespace Exercise_9b.Tests
 {
     [TestClass]
     public class AwesomeIOCContainerSpecs
@@ -119,46 +120,5 @@ namespace Exercise_9.Tests
             container.Resolve<IServiceWithMultipleDependencies>().Should().BeOfType<ServiceWithMultipleDependencies>();
         }
         
-    }
-
-    public interface IServiceWithoutDependencies
-    {
-    }
-
-    public class ServiceWithoutDependencies : IServiceWithoutDependencies
-    {
-    }
-
-    public interface IServiceWithDependencies
-    {
-        IServiceWithoutDependencies Dependency { get; set; }
-    }
-
-    public interface IServiceWithMultipleDependencies
-    {
-        IServiceWithoutDependencies Dependency1 { get; set; }
-        IServiceWithDependencies Dependency2 { get; set; }
-    }
-
-    public class ServiceWithDependencies : IServiceWithDependencies
-    {
-        public ServiceWithDependencies(IServiceWithoutDependencies dependency)
-        {
-            Dependency = dependency;
-        }
-
-        public IServiceWithoutDependencies Dependency { get; set; }
-    }
-    
-    public class ServiceWithMultipleDependencies : IServiceWithMultipleDependencies
-    {
-        public ServiceWithMultipleDependencies(IServiceWithoutDependencies dependency1, IServiceWithDependencies dependency2)
-        {
-            Dependency1 = dependency1;
-            Dependency2 = dependency2;
-        }
-
-        public IServiceWithoutDependencies Dependency1 { get; set; }
-        public IServiceWithDependencies Dependency2 { get; set; }
     }
 }

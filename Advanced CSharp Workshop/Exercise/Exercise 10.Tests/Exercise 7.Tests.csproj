@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F4D36B11-7661-41A7-B83B-E364FFEAA02C}</ProjectGuid>
+    <ProjectGuid>{6D797F9B-DD8D-48BD-B3BB-74D8A55A12AE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Exercise_9.Tests</RootNamespace>
-    <AssemblyName>Exercise 9.Tests</AssemblyName>
+    <RootNamespace>Exercise_7.Tests</RootNamespace>
+    <AssemblyName>Exercise 7.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -36,7 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FluentAssertions">
-      <HintPath>..\packages\FluentAssertions.2.0.1\lib\net45\FluentAssertions.dll</HintPath>
+      <HintPath>..\packages\FluentAssertions.2.1.0.0\lib\net45\FluentAssertions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
@@ -55,13 +55,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="AwesomeIOCContainerSpecs.cs" />
+    <Compile Include="ThreadingSpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Exercise 9\Exercise 9.csproj">
-      <Project>{c29b19d7-69a8-4546-841c-591490e69fb6}</Project>
-      <Name>Exercise 9</Name>
+    <ProjectReference Include="..\Exercise 10\Exercise 7.csproj">
+      <Project>{f62a23c5-cb97-41af-8b0e-661d53ebcacf}</Project>
+      <Name>Exercise 7</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

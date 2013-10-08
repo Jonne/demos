@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 
-namespace Exercise_7
+namespace Exercise_9
 {
     public class Order
     {
@@ -13,7 +13,7 @@ namespace Exercise_7
 
         public decimal CalculateTotalOfOrders()
         {
-            // Lets pretend okay?
+            // Huge calculation going on here...
             Thread.Sleep(5);
 
             return OrderTotal;

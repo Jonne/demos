@@ -50,5 +50,10 @@ namespace Exercise_8
                 cancelButton.Enabled = false;
             }
         }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

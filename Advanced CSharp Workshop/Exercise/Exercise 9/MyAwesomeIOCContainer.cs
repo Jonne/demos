@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Exercise_9
+namespace Exercise_9b
 {
     public class MyAwesomeIocContainer
     {
@@ -30,6 +30,11 @@ namespace Exercise_9
         }
 
         public void RegisterAll<T>(Func<Type, bool> predicate)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void InterceptWith(IIntercept interceptor)
         {
             throw new NotImplementedException();
         }
