@@ -55,6 +55,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Data\ServiceWithPropertyDependency.cs" />
     <Compile Include="InterceptionSpecs.cs" />
     <Compile Include="AwesomeIOCContainerSpecs.cs" />
     <Compile Include="Data\IServiceWithDependencies.cs" />

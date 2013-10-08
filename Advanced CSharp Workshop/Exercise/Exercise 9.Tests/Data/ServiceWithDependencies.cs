@@ -4,9 +4,9 @@
     {
         public ServiceWithDependencies(IServiceWithoutDependencies dependency)
         {
-            Dependency = dependency;
+            SomeDependency = dependency;
         }
 
-        public IServiceWithoutDependencies Dependency { get; set; }
+        public IServiceWithoutDependencies SomeDependency { get; set; }
     }
 }

@@ -40,8 +40,24 @@ namespace Exercise_9b.Tests
             implementation.Should().NotBeNull();
             implementation.Should().BeOfType<ServiceWithDependencies>();
 
-            implementation.Dependency.Should().NotBeNull();
-            implementation.Dependency.Should().BeOfType<ServiceWithoutDependencies>();
+            implementation.SomeDependency.Should().NotBeNull();
+            implementation.SomeDependency.Should().BeOfType<ServiceWithoutDependencies>();
+        }
+
+        [TestMethod]
+        public void Should_instantiate_registered_type_with_property_dependency()
+        {
+            var container = new MyAwesomeIocContainer();
+
+            container.Register<IServiceWithoutDependencies, ServiceWithoutDependencies>();
+            container.Register<IServiceWithDependencies, ServiceWithPropertyDependency>();
+
+            var implementation = container.Resolve<IServiceWithDependencies>();
+            implementation.Should().NotBeNull();
+            implementation.Should().BeOfType<ServiceWithPropertyDependency>();
+
+            implementation.SomeDependency.Should().NotBeNull();
+            implementation.SomeDependency.Should().BeOfType<ServiceWithoutDependencies>();
         }        
         [TestMethod]
         public void Should_instantiate_registered_type_with_multiple_dependencies()
@@ -79,8 +95,8 @@ namespace Exercise_9b.Tests
             implementation.Dependency2.Should().NotBeNull();
             implementation.Dependency2.Should().BeOfType<ServiceWithDependencies>();
 
-            implementation.Dependency2.Dependency.Should().NotBeNull();
-            implementation.Dependency2.Dependency.Should().BeOfType<ServiceWithoutDependencies>();
+            implementation.Dependency2.SomeDependency.Should().NotBeNull();
+            implementation.Dependency2.SomeDependency.Should().BeOfType<ServiceWithoutDependencies>();
         }
 
         [TestMethod]

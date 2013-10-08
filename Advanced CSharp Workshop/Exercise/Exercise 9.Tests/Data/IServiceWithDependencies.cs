@@ -2,6 +2,6 @@
 {
     public interface IServiceWithDependencies
     {
-        IServiceWithoutDependencies Dependency { get; set; }
+        IServiceWithoutDependencies SomeDependency { get; set; }
     }
 }
